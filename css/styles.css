@@ -897,7 +897,8 @@ margin-left: 16px;
     width: 16px;
     height: 15px;
     border: 2px solid var(--second-color-text);
-    border-radius: 3px; 
+    border-radius: 3px;
+    transition: border 250ms var(--cubic); 
 }
 
 .contract-text {
@@ -912,7 +913,15 @@ margin-left: 16px;
     color: var(--acent-color);
 }
 
-.checkbox-label:hover .contract-text {
+.modal-checkbox:hover .checkbox-label::before {
+    border: 2px solid var(--acent-color);
+}
+
+.modal-checkbox:focus-within .checkbox-label::before {
+    border: 2px solid var(--acent-color);
+}
+
+.modal-checkbox:hover .contract-text {
     color: var(--acent-color);
 }
 
