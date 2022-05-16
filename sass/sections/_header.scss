@@ -1,0 +1,117 @@
+.header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ECECEC;
+    .conteiner {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.logo {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+
+.logo span{
+    color: var(--acent-color)
+}
+
+/* navigate */
+.header-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14x;
+    letter-spacing: 0.02em;
+    color: var(--second-color-text);
+    transition: color 250ms var(--cubic);
+
+}
+
+.header-link:hover, .header-contact__mail:hover, .header-contact__tel:hover {
+    color: var(--acent-color);
+
+}
+
+.header-contact__mail:hover .header-contact__icon, .header-contact__tel:hover .header-contact__icon {
+    fill: var(--acent-color);
+
+}
+
+.header-contact__mail:focus .header-contact__icon, .header-contact__tel:focus .header-contact__icon {
+    fill: var(--acent-color);
+}
+
+.header-link:focus, .header-contact__mail:focus, .header-contact__tel:focus {
+    color: var(--acent-color);
+}
+ 
+
+
+.current::after {
+    position: absolute;
+    top: 260%;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: var(--acent-color) ;
+    border-radius: 2px;
+}
+
+
+.header-pages {
+    margin-left: 93px;
+    display: flex;
+    .link.current { 
+        color: var(--acent-color);
+        position: relative;
+    }
+}
+
+.header-contact {
+    display: flex;
+    margin-left: 215px;
+}
+
+.header-contact__mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    transition: color 250ms var(--cubic);
+}
+
+.header-contact__tel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 250ms var(--cubic);
+}
+
+.header-pages__item:not(:last-child) {
+margin-right: 50px;
+}
+.header-contact__mail, .header-contact__tel {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--first-color-text);
+}
+
+.contact-block {
+    display: flex;
+    justify-self:center;
+}
+
+.header-contact__icon {
+    fill: var(--background-color-logo);
+    margin-right: 10px;
+    transition: fill 250ms var(--cubic);
+}

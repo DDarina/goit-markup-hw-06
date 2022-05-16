@@ -1,0 +1,100 @@
+.hero {
+
+    background-color: var(--background-color-dark);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),url(../images/first-page/bgimg.jpg);
+    max-width: 1600px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.hero .conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px 0px;
+}
+
+.hero__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--acent-color-background-text);
+    width: 696px;
+    margin-bottom: 30px;
+}
+
+.hero__btn:hover, .hero__btn:focus {
+    background-color: #188CE8;
+    transition: background-color 250ms var(--cubic);
+} 
+.hero__btn {
+    background-color: var(--acent-color);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--acent-color-background-text);
+    width: 200px;
+    height: 50px;
+    left: 700px;
+    top: 430px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transform: background-color;
+}
+
+
+/* benefits*/
+.benefits {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.benefits-list {
+    display: flex;
+    align-content: space-between;
+}
+
+.benefits-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.benefits-item {
+    width: 270px;
+}
+
+.benefits-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: var(--background-color-grey);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+
+.benefits-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--second-color-text);
+    margin-bottom: 10px;
+}
+
+.benefits-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
