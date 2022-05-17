@@ -1,5 +1,4 @@
 .hero {
-
     background-color: var(--background-color-dark);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),url(../images/first-page/bgimg.jpg);
     max-width: 1600px;
@@ -8,31 +7,26 @@
     background-position: center;
     background-size: cover;
     margin: 0 auto;
+    & .conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 200px 0px;
+    }
+    &__title {
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--acent-color-background-text);
+        width: 696px;
+        margin-bottom: 30px;
+    }
 }
 
-.hero .conteiner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 200px 0px;
-}
 
-.hero__title {
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--acent-color-background-text);
-    width: 696px;
-    margin-bottom: 30px;
-}
-
-.hero__btn:hover, .hero__btn:focus {
-    background-color: #188CE8;
-    transition: background-color 250ms var(--cubic);
-} 
 .hero__btn {
     background-color: var(--acent-color);
     font-family: inherit;
@@ -50,51 +44,8 @@
     border: none;
     cursor: pointer;
     transform: background-color;
-}
-
-
-/* benefits*/
-.benefits {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.benefits-list {
-    display: flex;
-    align-content: space-between;
-}
-
-.benefits-item:not(:last-child) {
-    margin-right: 30px;
-}
-
-.benefits-item {
-    width: 270px;
-}
-
-.benefits-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-    background-color: var(--background-color-grey);
-    border-radius: 4px;
-    margin-bottom: 30px;
-}
-
-
-.benefits-title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--second-color-text);
-    margin-bottom: 10px;
-}
-
-.benefits-text {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    &:hover, &:focus {
+        background-color: #188CE8;
+        transition: background-color 250ms var(--cubic);
+    } 
 }

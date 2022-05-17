@@ -22,13 +22,13 @@
                 <nav class="header-nav">
                     <ul class="header-pages list">
                         <li class="header-pages__item"><a href="./index.html" class="header-link link">Студия</a></li>
-                        <li class="header-pages__item"><a href="./portfolio.html" class="header-link link  current">Портфолио</a></li>
+                        <li class="header-pages__item"><a href="./portfolio.html" class="header-link  current link">Портфолио</a></li>
                         <li class="header-pages__item"><a href="./" class="header-link link">Контакты</a></li>
                     </ul>       
                 </nav>
                 <ul class="header-contact list">
                     <li> 
-                        <a href="mailto:info@devstudio.com" class="header-contact__mail link">
+                        <a href="mailto:info@devstudio.com" class="header-contact__item mail link">
                             <svg class="header-contact__icon"  width="16" height="12">
                                 <use href="./images/icons.svg#icon-envelope"></use>
                             </svg>
@@ -36,11 +36,11 @@
                         </a>
                     </li>
                     <li>
-                        <a href="tel:+380961111111" class="header-contact__tel link">
+                        <a href="tel:+380961111111" class="header-contact__item tel link">
                                 <svg class="header-contact__icon"  width="10" height="16">
                                     <use href="./images/icons.svg#icon-smart"></use>
                                 </svg>
-                            <span>+38 096 111 11 11</span> 
+                            <span class="header-contact__text">+38 096 111 11 11</span> 
                         </a>
                     </li>
                 </ul>
@@ -178,54 +178,68 @@
         <footer class="footer">
             <div class="conteiner">
                 <div class="conteiner-addres">
-                    <a href="/" class="footer-logo link"><span>Web</span>Studio</a>
+                    <a href="/" class="logo logo--footer link"><span>Web</span>Studio</a>
                     <address class="footer-address">
-                        <ul class="footer-address-list list">
-                            <li class="footer-item">
-                                <a href="https://goo.gl/maps/hMGSiSiH3azLp2Ly5" target="_blank" rel="noopener, noindex, nofollow" class="footer-address-link link">г. Киев, пр-т Леси Украинки, 26</a>
+                        <ul class="footer-address__list list">
+                            <li class="footer-address__item">
+                                <a href="https://goo.gl/maps/hMGSiSiH3azLp2Ly5" target="_blank" rel="noopener, noindex, nofollow" class="footer-address__link link">г. Киев, пр-т Леси Украинки, 26</a>
                             </li>
-                            <li class="footer-item">
-                                <a href="mailto:info@example.com" class="footer-mail link">info@example.com</a>
+                            <li class="footer-address__item">
+                                <a href="mailto:info@example.com" class="footer-address__link footer-address__link--mail link">info@example.com</a>
                             </li>
-                            <li class="footer-item">
-                                <a href="tel:+380991111111" class="footer-tel link">+38 099 111 11 11</a>
+                            <li class="footer-address__item">
+                                <a href="tel:+380991111111" class="footer-address__link footer-address__link--tel link">+38 099 111 11 11</a>
                             </li>
                         </ul> 
                     </address>
                 </div>
-                <div class="conteiner-soc">
-                    <h3 class="footer-soc-header" >присоединяйтесь</h3>
-                    <ul class="footer-soc-connect list">
-                        <li class="footer-soc-ikon">
-                            <a href="/" class="footer-soc-link">
-                                <svg class="footer-soc-logo" width="20" height="20">
+                <div class="footer-soc">
+                    <h3 class="footer-soc__header" >присоединяйтесь</h3>
+                    <ul class="footer-soc__connect list">
+                        <li class="footer-soc__ikon">
+                            <a href="/" class="footer-soc__link">
+                                <svg class="footer-soc__logo" width="20" height="20">
                                     <use href="./images/icons.svg#icon-insta "></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="footer-soc-ikon">
-                            <a href="/" class="footer-soc-link">
-                                <svg class="footer-soc-logo" width="20" height="20">
+                        <li class="footer-soc__ikon">
+                            <a href="/" class="footer-soc__link">
+                                <svg class="footer-soc__logo" width="20" height="20">
                                     <use href="./images/icons.svg#icon-twitter"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="footer-soc-ikon">
-                            <a href="/" class="footer-soc-link">
-                                <svg class="footer-soc-logo" width="20" height="20">
+                        <li class="footer-soc__ikon">
+                            <a href="/" class="footer-soc__link">
+                                <svg class="footer-soc__logo" width="20" height="20">
                                     <use href="./images/icons.svg#icon-fb"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="footer-soc-ikon">
-                            <a href="/" class="footer-soc-link">
-                                <svg class="footer-soc-logo" width="20" height="20">
+                        <li class="footer-soc__ikon">
+                            <a href="/" class="footer-soc__link">
+                                <svg class="footer-soc__logo" width="20" height="20">
                                     <use href="./images/icons.svg#icon-linkedin"></use>
                                 </svg>
                             </a>
                         </li>
                     </ul>
                 </div>
+                <form class="footer-form">
+                        <div>
+                            <label for="signature" class="footer-form__label">Подпишитесь на рассылку</label>
+                            <input type="email" name="signature-mail" class="footer-form__input" id="signature" placeholder="E-mail">
+                        </div>                    
+                        <div>
+                            <button type="sabmit" class="footer-form__btn">
+                                <span>Подписаться </span>
+                                <svg class="footer-form__icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-send"></use>
+                                </svg>
+                            </button>
+                        </div>  
+                </form>
             </div>  
         </footer>
     </body>

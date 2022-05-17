@@ -8,10 +8,6 @@
     transition: opacity 250ms var(--cubic),visibility 250ms var(--cubic);
 } 
 
-.backdrop.is-hidden  .modal {
-    transform: rotateZ(180deg);
-}
-
 .modal {
     position: absolute;
     top: 50%;
@@ -21,14 +17,15 @@
     min-height: 528px;
     background-color: var(--acent-color-background-text);
     transition: transform 250ms; 
-
+    .backdrop.is-hidden  & {
+        transform: rotateZ(180deg);
+    }
 }
 
 .is-hidden {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-
 }
 
 .modal-close-btn {
@@ -44,19 +41,21 @@
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    &:hover, &:focus {
+        cursor: pointer;
+    }
 }
 
 .close-btn-img {
     fill: #000000;
     transition: fill 250ms var(--cubic);
-}
-.modal-close-btn:hover .close-btn-img {
-    fill: var(--acent-color);
+    .modal-close-btn:hover & {
+        fill: var(--acent-color);
+    }
 }
 
-.modal-close-btn:hover, .modal-close-btn:focus {
-    cursor: pointer;
-}
+
+
 
 
 .modal-form {
@@ -84,10 +83,18 @@
     fill: var(--second-color-text);
 }
 
+
+.checkbox {
+    visibility: hidden;
+} 
+
 .modal-checkbox {
-margin-left: 16px;
+    margin-left: 16px;
     position: relative;
     margin-top: 20px;
+    &:hover .contract-text {
+        color: var(--acent-color);
+    }
 }
 
 .checkbox-icon {
@@ -111,19 +118,31 @@ margin-left: 16px;
 
 
 
-.checkbox-label::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--second-color-text);
-    border-radius: 3px;
-    transition: border 250ms var(--cubic); 
+.checkbox-label {
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 16px;
+        height: 15px;
+        border: 2px solid var(--second-color-text);
+        border-radius: 3px;
+        transition: border 250ms var(--cubic); 
+    }
+    &:focus-within .contract-text {
+        color: var(--acent-color);
+    }
+    .modal-checkbox:hover &::before {
+        border: 2px solid var(--acent-color);
+    }
+    .modal-checkbox:focus-within &::before {
+        border: 2px solid var(--acent-color);
+    }
 }
+
 
 .contract-text {
     padding-left: 5px;
@@ -133,26 +152,6 @@ margin-left: 16px;
     color: var(--first-color-text);
     transition: color 250ms var(--cubic);
 }
-.checkbox-label:focus-within .contract-text {
-    color: var(--acent-color);
-}
-
-.modal-checkbox:hover .checkbox-label::before {
-    border: 2px solid var(--acent-color);
-}
-
-.modal-checkbox:focus-within .checkbox-label::before {
-    border: 2px solid var(--acent-color);
-}
-
-.modal-checkbox:hover .contract-text {
-    color: var(--acent-color);
-}
-
-.checkbox {
-    visibility: hidden;
-} 
-
 
 .checkbox:checked ~ .checkbox-label::after {
     display: none;
@@ -185,12 +184,12 @@ margin-left: 16px;
     border: none;
     cursor: pointer;
     transform: background-color;
-    
+    &:hover, &:focus {
+        background-color: #188CE8;
+        transition: background-color 250ms var(--cubic);
+    }
 }
-.modal-submit-btn:hover, .modal-submit-btn:focus {
-    background-color: #188CE8;
-    transition: background-color 250ms var(--cubic);
-}
+
 .modal-form-label {
     margin-bottom: 4px;
     font-weight: 400;
@@ -207,16 +206,21 @@ margin-left: 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border-color 250ms var(--cubic);
-}
-
-.modal-form-fild:hover, .modal-form-fild:focus  {
-    border-color: var(--acent-color);
-
+    &:hover, &:focus  {
+        border-color: var(--acent-color);
+    }
+    &:hover + .fild-icon,  &:focus + .fild-icon {
+        fill: var(--acent-color);
+    }
+    .fild-icon:hover & { 
+        border-color: var(--acent-color);
+    }
 }
 
 .input {
     position: relative;
 }
+
 .fild-icon {
     position: absolute;
     left: 12px;
@@ -224,17 +228,9 @@ margin-left: 16px;
     transform: translateY(-50%);
     fill: var(--second-color-text);
     transition: fill 250ms var(--cubic);
-}
-
-.fild-icon:hover , .fild-icon:focus {
-    fill: var(--acent-color);
-}
-.modal-form-fild:hover + .fild-icon,  .modal-form-fild:focus + .fild-icon {
-    fill: var(--acent-color);
-}
-
-.fild-icon:hover .modal-form-fild { 
-    border-color: var(--acent-color);
+    &:hover , &:focus {
+        fill: var(--acent-color);
+    }
 }
 
 .comment {
@@ -248,4 +244,3 @@ margin-left: 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
-

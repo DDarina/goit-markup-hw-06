@@ -1,11 +1,10 @@
 .our-work {
     padding-bottom: 94px;
-}
-
-.our-work .conteiner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    & .conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .our-work-item:not(:last-child) {
@@ -33,8 +32,6 @@
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
-
 }
 
 .our-work-list {

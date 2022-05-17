@@ -71,19 +71,17 @@
     background-color: var(--acent-color-background-text);
     border-radius: 50%;
     transition: background-color 250ms var(--cubic);
-}
-
-.team-soc-link:hover, .team-soc-link:focus {
-    background-color: var(--acent-color);
+    &:hover, &:focus {
+        background-color: var(--acent-color);
+    }
 }
 
 .team-soc-logo {
     fill: var(--background-color-logo);
     transition: fill 250ms var(--cubic);
-}
-
-.team-soc-link:hover .team-soc-logo, .team-soc-link:focus .team-soc-logo {
-    fill: var(--acent-color-background-text);
+    .team-soc-link:hover &, .team-soc-link:focus & {
+        fill: var(--acent-color-background-text);
+    }
 }
 
 .team-soc-ikon:not(:last-child) {

@@ -2,115 +2,73 @@
     background-color: var(--background-color-dark);
     padding-top: 60px;
     padding-bottom: 60px;
-}
-.footer-logo {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    color:  var(--acent-color-background-text);
-}
-
-.footer-logo span{
-    color: var(--acent-color);
-}
-
-.footer-address {
-    margin-top: 20px;
+    & .conteiner {
+        display: flex;
+    }
 }
 
 .conteiner-addres {
     margin-right: 70px;
 }
 
-.footer-address-link {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: var(--acent-color-background-text);
-    transition: color 1000ms var(--cubic);
+
+
+.footer-address {
+    margin-top: 20px;
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+    &__link {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--acent-color-background-text);
+        transition: color 250ms var(--cubic);
+        &:hover, &:focus {
+            color: var(--acent-color);
+        }
+    }
+    &__link--tel, &__link--mail {
+        color: rgba(255, 255, 255, 0.6);
+    }
 }
 
-.footer-item:not(:last-child) {
-    margin-bottom: 9px;
-}
-.footer-address-link:hover, .footer-mail:hover, .footer-tel:hover {
-    color: var(--acent-color);
-}
 
-.footer-address-link:focus, .footer-mail:focus, .footer-tel:focus {
-    color: var(--acent-color);
-}
-
-.footer-mail, .footer-tel {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-    transition: color 250ms var(--cubic);
-}
-
-.footer .conteiner {
-    display: flex;
-}
-
-.conteiner-soc {
+.footer-soc {
     padding-top: 12px;
-}
-
-.footer-soc-header {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--acent-color-background-text);
-    margin-bottom: 20px;
-
-}
-
-.footer-soc-connect {
-    display: flex;
-}
-
-
-.footer-soc-ikon:not(:last-child) {
-    margin-right: 10px;
-}
-
-.footer-soc-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    transition: background-color 250ms var(--cubic);
-}
-.footer-soc-link:hover, .footer-soc-link:focus {
-background-color: var(--acent-color);
-}
-
-.footer-soc-logo {
-    fill: var(--acent-color-background-text);
-}
-
-.signature-label {
-    display: block;
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--acent-color-background-text);
+    &__header {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--acent-color-background-text);
+        margin-bottom: 20px;
+    }
+    &__connect {
+        display: flex;
+    }
+    &__ikon:not(:last-child) {
+        margin-right: 10px;
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        transition: background-color 250ms var(--cubic);
+        &:hover, &:focus {
+            background-color: var(--acent-color);
+            }
+    }
+    &__logo {
+        fill: var(--acent-color-background-text);
+    }
 }
 
 .footer-form {
@@ -120,48 +78,48 @@ background-color: var(--acent-color);
     justify-content: right;
     padding-left: 93px;
     padding-top: 12px;
+    &__label {
+        display: block;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--acent-color-background-text);
+    }
+    &__input {
+        height: 50px;  
+        width: 350px;
+        padding-left: 10px;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: var(--background-color-dark);
+        color: var(--background-color-logo);
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 50px;
+        margin-top: 35px;
+        margin-left: 12px;
+        border-radius: 4px;
+        border: none;
+        background-color: var(--acent-color) ;
+        color: var(--acent-color-background-text);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.06em;
+        &:hover, &:focus {
+            background-color: #188CE8;
+            transition: background-color 250ms var(--cubic);
+        } 
+    }
+    &__icon {
+        fill: var(--acent-color-background-text);
+        margin-left: 10px;
+    }
 }
-
-
-
-.signature-input {
-    height: 50px;  
-    width: 350px;
-    padding-left: 10px;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: var(--background-color-dark);
-    color: var(--background-color-logo);
-}
-
-.signature-fild-btn {
-    padding-top: 35px;
-}
-
-
-.signature-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 50px;
-    margin-left: 12px;
-    border-radius: 4px;
-    border: none;
-    background-color: var(--acent-color) ;
-    color: var(--acent-color-background-text);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.06em;
-}
-
-.signature-icon {
-    fill: var(--acent-color-background-text);
-    margin-left: 10px;
-}
-
-.signature-btn:hover, .signature-btn:focus {
-    background-color: #188CE8;
-    transition: background-color 250ms var(--cubic);
-} 
